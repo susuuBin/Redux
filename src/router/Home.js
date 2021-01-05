@@ -12,7 +12,8 @@ function Home({ toDos, addToDo }){
   function onSubmit(e) {
     e.preventDefault();
     setText("");
-    addToDo(text);
+    if(text.length > 0) addToDo(text);
+    else alert("내용을 입력해 주세요!");
   };
 
   return (
